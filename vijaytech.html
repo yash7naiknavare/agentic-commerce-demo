@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VijayTech Electronics — Since 1987</title>
+  <!-- NO structured data. NO JSON-LD. NO itemprop. NO llms.txt. NO API. -->
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: "Times New Roman", Times, serif;
+      background: #FFFFFF;
+      color: #000000;
+      font-size: 15px;
+      line-height: 1.5;
+    }
+
+    /* ===== HEADER ===== */
+    #site-header {
+      background: #000000;
+      color: #FFFFFF;
+      padding: 18px 24px 14px;
+      border-bottom: 4px solid #888888;
+    }
+    #site-header h1 {
+      font-size: 2.6rem;
+      letter-spacing: 2px;
+      font-weight: 900;
+      text-transform: uppercase;
+      font-family: "Times New Roman", Times, serif;
+    }
+    #site-header .tagline {
+      font-size: 0.85rem;
+      color: #888888;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      margin-top: 3px;
+    }
+    #site-header .header-sub {
+      margin-top: 6px;
+      font-size: 0.78rem;
+      color: #888888;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    /* ===== NAV ===== */
+    #main-nav {
+      background: #333333;
+      padding: 0 24px;
+      display: flex;
+      flex-wrap: wrap;
+      border-bottom: 2px solid #000000;
+    }
+    #main-nav a {
+      color: #FFFFFF;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 0.8rem;
+      font-family: Arial, Helvetica, sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      border-right: 1px solid #555555;
+      display: inline-block;
+    }
+    #main-nav a:hover { background: #000000; }
+    #main-nav a.active { background: #000000; font-weight: bold; }
+
+    /* ===== ANNOUNCEMENT BAR ===== */
+    .announcement-bar {
+      background: #F2F2F2;
+      border-bottom: 1px solid #888888;
+      padding: 7px 24px;
+      font-size: 0.76rem;
+      font-family: Arial, sans-serif;
+      color: #333333;
+    }
+
+    /* ===== SALE BANNER ===== */
+    #sale-banner {
+      background: #000000;
+      color: #FFFFFF;
+      text-align: center;
+      padding: 20px 24px;
+      border-bottom: 3px double #888888;
+    }
+    #sale-banner h2 {
+      font-size: 1.9rem;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      font-weight: 900;
+      font-family: "Times New Roman", Times, serif;
+    }
+    #sale-banner p {
+      font-size: 0.8rem;
+      color: #888888;
+      margin-top: 5px;
+      letter-spacing: 2px;
+      font-family: Arial, sans-serif;
+    }
+
+    /* ===== PAGE BODY LAYOUT ===== */
+    #page-body {
+      display: flex;
+    }
+
+    /* ===== SIDEBAR ===== */
+    #sidebar {
+      width: 195px;
+      flex-shrink: 0;
+      border-right: 2px solid #333333;
+      padding: 16px 12px;
+      background: #F2F2F2;
+    }
+    #sidebar h3 {
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 2px solid #000000;
+      padding-bottom: 4px;
+      margin-bottom: 8px;
+      font-family: Arial, sans-serif;
+    }
+    #sidebar ul {
+      list-style: none;
+      margin-bottom: 18px;
+    }
+    #sidebar ul li a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 0.78rem;
+      display: block;
+      padding: 3px 0;
+      border-bottom: 1px dotted #888888;
+      font-family: Arial, sans-serif;
+    }
+    #sidebar ul li a:hover { text-decoration: underline; }
+    .sidebar-box {
+      border: 1px solid #333333;
+      padding: 8px;
+      margin-bottom: 12px;
+      background: #FFFFFF;
+      font-size: 0.72rem;
+      font-family: Arial, sans-serif;
+      line-height: 1.5;
+    }
+    .sidebar-box strong {
+      display: block;
+      margin-bottom: 3px;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ===== CONTENT AREA ===== */
+    #content-area {
+      flex: 1;
+      padding: 20px 22px;
+    }
+
+    .section-title {
+      font-size: 1.35rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      border-bottom: 3px solid #000000;
+      padding-bottom: 6px;
+      margin: 28px 0 16px;
+      letter-spacing: 1px;
+      font-family: "Times New Roman", Times, serif;
+    }
+    .section-title:first-child { margin-top: 0; }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(215px, 1fr));
+      gap: 13px;
+      margin-bottom: 8px;
+    }
+
+    /* ===== PRODUCT CARD ===== */
+    .product-card {
+      border: 2px solid #000000;
+      padding: 11px;
+      background: #FFFFFF;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .product-card:hover { background: #F2F2F2; }
+
+    .product-label {
+      font-size: 0.62rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #FFFFFF;
+      background: #000000;
+      display: inline-block;
+      padding: 1px 6px;
+      margin-bottom: 6px;
+    }
+    .product-label.gray { background: #555555; }
+    .product-label.border {
+      background: #FFFFFF;
+      color: #000000;
+      border: 1px solid #000000;
+    }
+
+    .product-name {
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 5px;
+      line-height: 1.3;
+    }
+
+    .product-specs {
+      font-size: 0.7rem;
+      color: #888888;
+      margin-bottom: 8px;
+      line-height: 1.55;
+      border-left: 2px solid #F2F2F2;
+      padding-left: 6px;
+    }
+
+    .product-price {
+      font-size: 1.05rem;
+      font-weight: bold;
+      color: #000000;
+      margin-bottom: 3px;
+      font-family: "Times New Roman", Times, serif;
+    }
+
+    .product-rating {
+      font-size: 0.68rem;
+      color: #888888;
+      margin-bottom: 5px;
+    }
+
+    .product-stock {
+      font-size: 0.66rem;
+      color: #333333;
+      margin-bottom: 5px;
+      font-style: italic;
+    }
+
+    .product-delivery {
+      font-size: 0.63rem;
+      color: #888888;
+      margin-bottom: 9px;
+      border-top: 1px dotted #888888;
+      padding-top: 4px;
+      line-height: 1.45;
+    }
+
+    .btn-buy {
+      background: #000000;
+      color: #FFFFFF;
+      border: none;
+      padding: 7px 14px;
+      font-size: 0.72rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    .btn-buy:hover { background: #333333; }
+
+    .btn-wishlist {
+      background: #FFFFFF;
+      color: #000000;
+      border: 1px solid #000000;
+      padding: 5px 14px;
+      font-size: 0.67rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      text-align: center;
+      margin-top: 4px;
+      font-family: Arial, sans-serif;
+    }
+    .btn-wishlist:hover { background: #F2F2F2; }
+
+    /* ===== PROMO STRIP ===== */
+    .promo-strip {
+      background: #333333;
+      color: #FFFFFF;
+      padding: 9px 14px;
+      margin: 18px 0 8px;
+      font-size: 0.76rem;
+      font-family: Arial, sans-serif;
+      border-left: 5px solid #000000;
+      line-height: 1.5;
+    }
+
+    /* ===== FINE PRINT ===== */
+    .fine-print {
+      font-size: 0.63rem;
+      color: #888888;
+      border-top: 1px solid #888888;
+      padding-top: 10px;
+      margin-top: 22px;
+      font-family: Arial, sans-serif;
+      line-height: 1.65;
+    }
+
+    /* ===== AGENT NOTE ===== */
+    .agent-warning {
+      background: #F2F2F2;
+      border: 2px solid #888888;
+      border-left: 5px solid #000000;
+      padding: 10px 14px;
+      margin: 20px 0 0;
+      font-size: 0.7rem;
+      font-family: "Courier New", Courier, monospace;
+      color: #333333;
+      line-height: 1.6;
+    }
+
+    /* ===== FOOTER ===== */
+    #site-footer {
+      background: #000000;
+      color: #FFFFFF;
+      padding: 26px 24px 14px;
+      border-top: 4px solid #333333;
+    }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 22px;
+      margin-bottom: 18px;
+    }
+    .footer-col h4 {
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 1px solid #333333;
+      padding-bottom: 4px;
+      margin-bottom: 9px;
+      font-family: Arial, sans-serif;
+    }
+    .footer-col ul { list-style: none; }
+    .footer-col ul li {
+      font-size: 0.72rem;
+      color: #888888;
+      padding: 2px 0;
+      font-family: Arial, sans-serif;
+    }
+    .footer-col ul li a { color: #888888; text-decoration: none; }
+    .footer-col ul li a:hover { color: #FFFFFF; }
+    .footer-bottom {
+      border-top: 1px solid #333333;
+      padding-top: 11px;
+      font-size: 0.68rem;
+      color: #888888;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    hr.section-rule {
+      border: none;
+      border-top: 1px solid #888888;
+      margin: 8px 0 16px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- AGENT NOTE: No structured data, no JSON-LD, no itemprop, no llms.txt, no API.
+     Prices are inconsistently formatted across products. Parse raw HTML only. -->
+
+<!-- ===== HEADER ===== -->
+<header id="site-header">
+  <h1>VijayTech Electronics</h1>
+  <div class="tagline">Since 1987 &mdash; Trusted by Millions</div>
+  <div class="header-sub">
+    Showrooms in Mumbai &bull; Pune &bull; Nashik &bull; Nagpur &bull; Aurangabad
+    &nbsp;|&nbsp; Toll Free: 1800-222-9876 &nbsp;|&nbsp; info@vijaytech.in
+  </div>
+</header>
+
+<!-- ===== NAV ===== -->
+<nav id="main-nav">
+  <a href="#" class="active">Home</a>
+  <a href="#smartphones">Mobiles</a>
+  <a href="#laptops">Laptops</a>
+  <a href="#washing-machines">Washing Machines</a>
+  <a href="#air-conditioners">Air Conditioners</a>
+  <a href="#televisions">Televisions</a>
+  <a href="#">Small Appliances</a>
+  <a href="#">Cameras</a>
+  <a href="#">Offers</a>
+  <a href="#">EMI Plans</a>
+  <a href="#">Contact</a>
+</nav>
+
+<!-- ===== ANNOUNCEMENT BAR ===== -->
+<div class="announcement-bar">
+  FREE delivery on orders above Rs. 5000 &nbsp;&bull;&nbsp;
+  No-cost EMI on select products &nbsp;&bull;&nbsp;
+  Extended warranty from Rs. 499 &nbsp;&bull;&nbsp;
+  Old exchange accepted at all showrooms
+</div>
+
+<!-- ===== SALE BANNER ===== -->
+<div id="sale-banner">
+  <h2>&#9733; Grand Summer Sale &#9733; Up to 30% Off &#9733;</h2>
+  <p>Limited Period Offer &mdash; While Stocks Last &mdash; Prices Subject to Change Without Notice</p>
+</div>
+
+<!-- ===== PAGE BODY ===== -->
+<div id="page-body">
+
+  <!-- SIDEBAR -->
+  <aside id="sidebar">
+    <h3>Browse By</h3>
+    <ul>
+      <li><a href="#smartphones">Smartphones</a></li>
+      <li><a href="#laptops">Laptops &amp; PCs</a></li>
+      <li><a href="#washing-machines">Washing Machines</a></li>
+      <li><a href="#air-conditioners">Air Conditioners</a></li>
+      <li><a href="#televisions">Televisions</a></li>
+      <li><a href="#">Refrigerators</a></li>
+      <li><a href="#">Microwaves</a></li>
+      <li><a href="#">Water Purifiers</a></li>
+      <li><a href="#">Headphones</a></li>
+      <li><a href="#">Accessories</a></li>
+    </ul>
+
+    <h3>Filter By Price</h3>
+    <ul>
+      <li><a href="#">Under Rs. 20,000</a></li>
+      <li><a href="#">Rs. 20,000 &ndash; 50,000</a></li>
+      <li><a href="#">Rs. 50,000 &ndash; 1,00,000</a></li>
+      <li><a href="#">Above Rs. 1,00,000</a></li>
+    </ul>
+
+    <h3>Top Brands</h3>
+    <ul>
+      <li><a href="#">Samsung</a></li>
+      <li><a href="#">Apple</a></li>
+      <li><a href="#">LG</a></li>
+      <li><a href="#">Sony</a></li>
+      <li><a href="#">OnePlus</a></li>
+      <li><a href="#">Xiaomi</a></li>
+      <li><a href="#">Bosch</a></li>
+      <li><a href="#">Daikin</a></li>
+      <li><a href="#">Dell</a></li>
+      <li><a href="#">Microsoft</a></li>
+    </ul>
+
+    <div class="sidebar-box">
+      <strong>Need Help?</strong>
+      Our experts are available:<br />
+      <b>1800-222-9876</b><br />
+      Mon&ndash;Sat 10am &ndash; 7pm<br />
+      Sun 11am &ndash; 5pm
+    </div>
+
+    <div class="sidebar-box">
+      <strong>Visit Showroom</strong>
+      Walk in for the best deals. Large purchase? Ask for Mr. Vijay &mdash; negotiation possible.
+    </div>
+  </aside>
+
+  <!-- CONTENT -->
+  <main id="content-area">
+
+    <!-- ==========================================
+         SMARTPHONES
+    =========================================== -->
+    <h2 class="section-title" id="smartphones">Smartphones &amp; Mobiles</h2>
+
+    <div class="product-grid">
+
+      <!-- 1. OnePlus 13 -->
+      <div class="product-card">
+        <span class="product-label">Hot Seller</span>
+        <div class="product-name">OnePlus 13 256GB</div>
+        <div class="product-specs">
+          Snapdragon 8 Elite processor<br />
+          50MP Hasselblad triple camera<br />
+          100W SuperVOOC charging<br />
+          6.82&quot; 2K AMOLED 120Hz, 5G<br />
+          5400mAh battery
+        </div>
+        <div class="product-price">&#8377;69,999</div>
+        <div class="product-rating">Rating: 4.5/5 (312 reviews)</div>
+        <div class="product-stock">In Stock &mdash; Limited Units</div>
+        <div class="product-delivery">Ships in 2&ndash;4 working days, conditions apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 2. OnePlus 12R -->
+      <div class="product-card">
+        <span class="product-label border">New Arrival</span>
+        <div class="product-name">OnePlus 12R 256GB</div>
+        <div class="product-specs">
+          Snapdragon 8 Gen 2<br />
+          50MP Sony main camera<br />
+          100W SUPERVOOC, 5500mAh<br />
+          6.78&quot; AMOLED 120Hz, 5G
+        </div>
+        <div class="product-price">Rs. 43999</div>
+        <div class="product-rating">Rating: 4.3/5 (187 reviews)</div>
+        <div class="product-stock">Available &mdash; ships from warehouse</div>
+        <div class="product-delivery">Delivery 3&ndash;5 days, T&amp;C apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 3. Xiaomi 14 Ultra -->
+      <div class="product-card">
+        <span class="product-label">Premium</span>
+        <div class="product-name">Xiaomi 14 Ultra 512GB</div>
+        <div class="product-specs">
+          Leica Summilux quad cameras<br />
+          Snapdragon 8 Gen 3, 16GB RAM<br />
+          90W HyperCharge, 5000mAh<br />
+          6.73&quot; LTPO AMOLED 120Hz
+        </div>
+        <div class="product-price">INR 99999</div>
+        <div class="product-rating">Rating: 4.6/5 (98 reviews)</div>
+        <div class="product-stock">Call to confirm availability</div>
+        <div class="product-delivery">Delivery timelines vary by location</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 4. Xiaomi 14 -->
+      <div class="product-card">
+        <div class="product-name">Xiaomi 14 256GB</div>
+        <div class="product-specs">
+          Leica dual cameras<br />
+          Snapdragon 8 Gen 3, 12GB RAM<br />
+          67W turbo charging<br />
+          6.36&quot; AMOLED 120Hz, 5G
+        </div>
+        <div class="product-price">&#8377;54,999</div>
+        <div class="product-rating">Rating: 4.4/5 (142 reviews)</div>
+        <div class="product-stock">In Stock</div>
+        <div class="product-delivery">Ships in 2&ndash;5 days</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+    </div><!-- /smartphones grid -->
+
+    <div class="promo-strip">
+      MOBILE EXCHANGE OFFER: Get up to Rs. 15,000 off on exchange of your old smartphone.
+      Valuation at our showroom or via courier. Terms &amp; conditions apply. Select models only.
+    </div>
+
+    <!-- ==========================================
+         LAPTOPS
+    =========================================== -->
+    <h2 class="section-title" id="laptops">Laptops &amp; Computers</h2>
+
+    <div class="product-grid">
+
+      <!-- 5. MacBook Air M3 -->
+      <div class="product-card">
+        <span class="product-label border">Apple</span>
+        <div class="product-name">MacBook Air 15&quot; M3 8GB 256GB</div>
+        <div class="product-specs">
+          Apple M3 chip, 8-core CPU<br />
+          10-core GPU, Neural Engine<br />
+          15.3&quot; Liquid Retina display<br />
+          Up to 18hr battery, macOS Sequoia
+        </div>
+        <div class="product-price">&#8377;1,39,900</div>
+        <div class="product-rating">Rating: 4.7/5 (423 reviews)</div>
+        <div class="product-stock">Available &mdash; 3 units in stock</div>
+        <div class="product-delivery">Ships in 3&ndash;6 working days, conditions apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 6. Dell XPS 15 -->
+      <div class="product-card">
+        <span class="product-label">Top Rated</span>
+        <div class="product-name">Dell XPS 15 2025 32GB 1TB</div>
+        <div class="product-specs">
+          Intel Core Ultra 9 185H<br />
+          32GB LPDDR5x, 1TB NVMe SSD<br />
+          NVIDIA RTX 4060 8GB<br />
+          15.6&quot; OLED 3.5K 120Hz touch
+        </div>
+        <div class="product-price">Rs. 194990</div>
+        <div class="product-rating">Rating: 4.5/5 (67 reviews)</div>
+        <div class="product-stock">Order Now &mdash; ships on request</div>
+        <div class="product-delivery">Delivery in 5&ndash;8 working days</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 7. HP Spectre x360 -->
+      <div class="product-card">
+        <span class="product-label gray">2-in-1</span>
+        <div class="product-name">HP Spectre x360 14&quot;</div>
+        <div class="product-specs">
+          Intel Core Ultra 7 155H<br />
+          32GB RAM, 1TB SSD<br />
+          14&quot; 2.8K OLED touch, 360&deg; hinge<br />
+          HP Pen included, Wi-Fi 6E
+        </div>
+        <div class="product-price">INR 159999</div>
+        <div class="product-rating">Rating: 4.4/5 (51 reviews)</div>
+        <div class="product-stock">Limited Stock &mdash; call to confirm</div>
+        <div class="product-delivery">Ships in 4&ndash;7 days, subject to availability</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 8. Lenovo ThinkPad X1 Carbon -->
+      <div class="product-card">
+        <div class="product-name">Lenovo ThinkPad X1 Carbon Gen 12</div>
+        <div class="product-specs">
+          Intel Core Ultra 7 165U<br />
+          32GB LPDDR5, 1TB SSD<br />
+          14&quot; IPS 2.8K anti-glare<br />
+          MIL-SPEC certified, 57Whr battery
+        </div>
+        <div class="product-price">&#8377;1,49,990</div>
+        <div class="product-rating">Rating: 4.6/5 (89 reviews)</div>
+        <div class="product-stock">In Stock</div>
+        <div class="product-delivery">Delivery 3&ndash;5 working days</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 9. Asus ROG Zephyrus G14 -->
+      <div class="product-card">
+        <span class="product-label">Gaming</span>
+        <div class="product-name">Asus ROG Zephyrus G14 2024</div>
+        <div class="product-specs">
+          AMD Ryzen 9 8945HS<br />
+          32GB DDR5, 1TB NVMe SSD<br />
+          NVIDIA RTX 4070 8GB<br />
+          14&quot; OLED 2.8K 120Hz
+        </div>
+        <div class="product-price">Rs. 128990</div>
+        <div class="product-rating">Rating: 4.5/5 (134 reviews)</div>
+        <div class="product-stock">Available &mdash; while stocks last</div>
+        <div class="product-delivery">Ships 2&ndash;4 days, T&amp;C apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 10. Microsoft Surface Pro 11 -->
+      <div class="product-card">
+        <span class="product-label border">New</span>
+        <div class="product-name">Microsoft Surface Pro 11</div>
+        <div class="product-specs">
+          Snapdragon X Elite, 16GB RAM<br />
+          512GB SSD, Copilot+ AI<br />
+          13&quot; PixelSense Flex display<br />
+          Detachable keyboard sold separately
+        </div>
+        <div class="product-price">Price on request</div>
+        <div class="product-rating">Rating: 4.3/5 (28 reviews)</div>
+        <div class="product-stock">Call showroom for stock info</div>
+        <div class="product-delivery">Delivery timelines to be confirmed at time of order</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+    </div><!-- /laptops grid -->
+
+    <div class="promo-strip">
+      LAPTOP TRADE-IN: Bring your old laptop for valuation.
+      Corporate bulk orders accepted. Call 1800-222-9876 for custom configurations and business pricing.
+    </div>
+
+    <!-- ==========================================
+         WASHING MACHINES
+    =========================================== -->
+    <h2 class="section-title" id="washing-machines">Washing Machines</h2>
+
+    <div class="product-grid">
+
+      <!-- 11. Samsung 8kg Front Load -->
+      <div class="product-card">
+        <span class="product-label">Best Seller</span>
+        <div class="product-name">Samsung 8kg Front Load WW80T</div>
+        <div class="product-specs">
+          EcoBubble Technology<br />
+          1400 RPM, Digital Inverter Motor<br />
+          AI Control, Steam wash<br />
+          5-star BEE energy rating
+        </div>
+        <div class="product-price">&#8377;57,990</div>
+        <div class="product-rating">Rating: 4.4/5 (208 reviews)</div>
+        <div class="product-stock">In Stock &mdash; Free delivery*</div>
+        <div class="product-delivery">Ships in 3&ndash;7 days. *Installation charges extra, conditions apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 12. LG 7kg Front Load -->
+      <div class="product-card">
+        <div class="product-name">LG 7kg Front Load FHM1207SDU</div>
+        <div class="product-specs">
+          Inverter Direct Drive motor<br />
+          Steam technology, 1200 RPM<br />
+          6 Motion DD, Smart Diagnosis<br />
+          5-star BEE rated
+        </div>
+        <div class="product-price">INR 51490</div>
+        <div class="product-rating">Rating: 4.3/5 (176 reviews)</div>
+        <div class="product-stock">Available &mdash; check delivery pincode</div>
+        <div class="product-delivery">Delivery 4&ndash;8 days, installation as per schedule</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 13. Bosch 8kg -->
+      <div class="product-card">
+        <span class="product-label gray">Premium</span>
+        <div class="product-name">Bosch 8kg Front Load WAJ28262IN</div>
+        <div class="product-specs">
+          EcoSilence Drive motor<br />
+          1200 RPM, ActiveWater Plus<br />
+          15 wash programs, SpeedPerfect<br />
+          Anti-vibration design
+        </div>
+        <div class="product-price">Rs. 61490</div>
+        <div class="product-rating">Rating: 4.5/5 (94 reviews)</div>
+        <div class="product-stock">In Stock &mdash; Mumbai/Pune showrooms only</div>
+        <div class="product-delivery">Ships in 5&ndash;7 working days, T&amp;C apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 14. Whirlpool Semi-Auto -->
+      <div class="product-card">
+        <div class="product-name">Whirlpool 7.5kg Semi-Automatic</div>
+        <div class="product-specs">
+          Dual tub design<br />
+          Scrub station, Turbo Scrub<br />
+          Separate wash + spin<br />
+          3-star energy rating
+        </div>
+        <div class="product-price">&#8377;21,999</div>
+        <div class="product-rating">Rating: 4.1/5 (319 reviews)</div>
+        <div class="product-stock">In Stock &mdash; Fast dispatch</div>
+        <div class="product-delivery">Ships in 2&ndash;4 days</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+    </div><!-- /washing machines grid -->
+
+    <!-- ==========================================
+         AIR CONDITIONERS
+    =========================================== -->
+    <h2 class="section-title" id="air-conditioners">Air Conditioners</h2>
+
+    <div class="product-grid">
+
+      <!-- 15. Daikin 1.5T 5-Star -->
+      <div class="product-card">
+        <span class="product-label">5 Star</span>
+        <div class="product-name">Daikin 1.5 Ton 5-Star FTKF50TV</div>
+        <div class="product-specs">
+          Inverter split AC, R-32 refrigerant<br />
+          PM 2.5 filter, Coanda airflow<br />
+          Wi-Fi enabled, auto-restart<br />
+          1yr comprehensive, 5yr compressor warranty
+        </div>
+        <div class="product-price">&#8377;49,990</div>
+        <div class="product-rating">Rating: 4.5/5 (267 reviews)</div>
+        <div class="product-stock">In Stock &mdash; Installation: see fine print</div>
+        <div class="product-delivery">Ships 3&ndash;6 days. Installation not included, charged separately*</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 16. Voltas 1.5T -->
+      <div class="product-card">
+        <div class="product-name">Voltas 1.5 Ton 5-Star 185V Vectra</div>
+        <div class="product-specs">
+          Inverter compressor<br />
+          Auto cleanser, active dehumidifier<br />
+          Adjustable turbo cool<br />
+          4-in-1 adjustable mode
+        </div>
+        <div class="product-price">Rs. 45490</div>
+        <div class="product-rating">Rating: 4.2/5 (189 reviews)</div>
+        <div class="product-stock">Available &mdash; Limited stock</div>
+        <div class="product-delivery">Ships in 4&ndash;7 days, conditions apply</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 17. Blue Star 1.5T -->
+      <div class="product-card">
+        <span class="product-label gray">Sale</span>
+        <div class="product-name">Blue Star 1.5 Ton 5-Star IC518DATU</div>
+        <div class="product-specs">
+          Inverter split AC, R-32 gas<br />
+          Self-cleaning, auto restart<br />
+          Sleep mode, turbo cool<br />
+          5-star BEE 2024 rated
+        </div>
+        <div class="product-price">Call for price</div>
+        <div class="product-rating">Rating: 4.3/5 (112 reviews)</div>
+        <div class="product-stock">Stock confirmation required</div>
+        <div class="product-delivery">Delivery and installation dates to be scheduled at time of purchase</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+    </div><!-- /AC grid -->
+
+    <div class="promo-strip">
+      AC INSTALLATION NOTE: Standard installation includes 3ft copper pipe, 1 bracket, and basic wiring.
+      Additional charges apply for longer pipe runs, extra brackets, or stabiliser units.
+      Contact showroom for a complete installation quote before ordering.
+    </div>
+
+    <!-- ==========================================
+         TELEVISIONS
+    =========================================== -->
+    <h2 class="section-title" id="televisions">Televisions</h2>
+
+    <div class="product-grid">
+
+      <!-- 18. Samsung QLED Q60D -->
+      <div class="product-card">
+        <span class="product-label">QLED</span>
+        <div class="product-name">Samsung 55&quot; QLED 4K Q60D</div>
+        <div class="product-specs">
+          Quantum Dot technology<br />
+          Tizen OS, AirSlim design<br />
+          HDR10+, 4K AI upscaling<br />
+          3 HDMI, 2 USB
+        </div>
+        <div class="product-price">&#8377;76,990</div>
+        <div class="product-rating">Rating: 4.3/5 (341 reviews)</div>
+        <div class="product-stock">In Stock</div>
+        <div class="product-delivery">Ships in 3&ndash;5 working days. Wall-mount not included</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 19. LG OLED evo C4 -->
+      <div class="product-card">
+        <span class="product-label">OLED</span>
+        <div class="product-name">LG 55&quot; OLED evo C4</div>
+        <div class="product-specs">
+          OLED evo panel, a9 Gen7 AI processor<br />
+          Dolby Vision IQ, Dolby Atmos<br />
+          120Hz VRR, G-Sync &amp; FreeSync<br />
+          webOS 24, Magic Remote
+        </div>
+        <div class="product-price">INR 138990</div>
+        <div class="product-rating">Rating: 4.7/5 (203 reviews)</div>
+        <div class="product-stock">Available &mdash; 2 units only</div>
+        <div class="product-delivery">Delivery in 3&ndash;6 days, installation on request</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+      <!-- 20. Sony Bravia X90L -->
+      <div class="product-card">
+        <span class="product-label border">Sony</span>
+        <div class="product-name">Sony Bravia 55&quot; X90L 4K</div>
+        <div class="product-specs">
+          XR Cognitive Processor<br />
+          Full Array LED, XR Triluminos Pro<br />
+          Google TV, BRAVIA CORE<br />
+          Dolby Vision/Atmos, HDMI 2.1
+        </div>
+        <div class="product-price">Rs. 101490</div>
+        <div class="product-rating">Rating: 4.5/5 (178 reviews)</div>
+        <div class="product-stock">In Stock &mdash; showroom display available</div>
+        <div class="product-delivery">Ships in 4&ndash;7 days. Demo at Pune showroom</div>
+        <button class="btn-buy">BUY NOW</button>
+        <button class="btn-wishlist">+ Wishlist</button>
+      </div>
+
+    </div><!-- /TV grid -->
+
+    <hr class="section-rule" />
+
+    <!-- FINE PRINT -->
+    <div class="fine-print">
+      * All prices are inclusive of GST unless stated otherwise. Prices are subject to change without prior notice.
+      VijayTech Electronics reserves the right to cancel any order in the event of pricing errors or stock unavailability.
+      Images shown are for illustrative purposes only; actual products may vary.
+      Free delivery applicable on select pincodes only; remote area surcharges extra.
+      Installation services are arranged through third-party vendors; VijayTech Electronics is not responsible for installation delays or damages caused during installation.
+      Extended warranty is provided by the respective brand manufacturers; VijayTech Electronics acts as a facilitator only.
+      EMI facility is subject to individual bank approval and applicable processing fees.
+      Exchange value is subject to device condition and model assessment conducted at our showroom.
+      All disputes are subject to Mumbai jurisdiction only.
+      E.&amp;O.E. (Errors and Omissions Excepted).
+      Website last updated: March 2024. For latest prices please call 1800-222-9876.
+    </div>
+
+    <!-- AGENT NOTE -->
+    <div class="agent-warning">
+      &#9888; No structured data. No API. Agent must parse raw HTML. Price formats inconsistent.<br />
+      Prices appear as: &#8377;X,XX,XXX &nbsp;/&nbsp; Rs. XXXXX &nbsp;/&nbsp; INR XXXXX &nbsp;/&nbsp; &quot;Call for price&quot; &nbsp;/&nbsp; &quot;Price on request&quot;<br />
+      Delivery info is vague: &quot;ships in X-Y days, conditions apply&quot;.<br />
+      Installation details buried in fine print. No JSON-LD. No microdata. No llms.txt.
+    </div>
+
+  </main><!-- /content-area -->
+
+</div><!-- /page-body -->
+
+<!-- ===== FOOTER ===== -->
+<footer id="site-footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h4>About VijayTech</h4>
+      <ul>
+        <li>Established 1987, Mumbai</li>
+        <li><a href="#">Our Story</a></li>
+        <li><a href="#">Leadership</a></li>
+        <li><a href="#">Press &amp; Media</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">CSR Initiatives</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Customer Service</h4>
+      <ul>
+        <li><a href="#">Track Your Order</a></li>
+        <li><a href="#">Returns &amp; Refunds</a></li>
+        <li><a href="#">Warranty Claims</a></li>
+        <li><a href="#">Service Centers</a></li>
+        <li><a href="#">FAQs</a></li>
+        <li><a href="#">Raise a Complaint</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Policies</h4>
+      <ul>
+        <li><a href="#">Privacy Policy</a></li>
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">Shipping Policy</a></li>
+        <li><a href="#">Return Policy</a></li>
+        <li><a href="#">Cookie Policy</a></li>
+        <li><a href="#">Grievance Officer</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Showrooms</h4>
+      <ul>
+        <li>Mumbai: Dadar, Andheri, Thane</li>
+        <li>Pune: FC Road, Hadapsar</li>
+        <li>Nashik: College Road</li>
+        <li>Nagpur: Sitabuldi</li>
+        <li>Aurangabad: Jalna Road</li>
+        <li><a href="#">Find Nearest Store</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact Us</h4>
+      <ul>
+        <li>Toll Free: 1800-222-9876</li>
+        <li>Email: info@vijaytech.in</li>
+        <li>WhatsApp: 9820012345</li>
+        <li>Mon&ndash;Sat: 10am &ndash; 7pm</li>
+        <li>Sunday: 11am &ndash; 5pm</li>
+        <li><a href="#">Write to Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 VijayTech Electronics Pvt. Ltd. All Rights Reserved. CIN: U52100MH1987PTC044321</span>
+    <span>Designed by Vijay Infotech Solutions, Mumbai &mdash; Best viewed in Internet Explorer 11+</span>
+  </div>
+</footer>
+
+</body>
+</html>

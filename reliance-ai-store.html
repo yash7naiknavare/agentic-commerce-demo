@@ -1,0 +1,1345 @@
+<!DOCTYPE html>
+<!-- AGENT INSTRUCTIONS: This page is optimised for AI shopping agents -->
+<!-- API ENDPOINT: https://reliance-ai-store.example.com/api/products -->
+<!-- RESPONSE TIME: <200ms | FORMAT: JSON-LD | AUTH: None required for read -->
+<!-- AGENT CAPABILITIES: price-check, availability, cart-add, compare, EMI-calc -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reliance AI Store — India's Most Agent-Ready Electronics Store</title>
+<meta name="description" content="Buy Smartphones, Laptops, ACs, Washing Machines & TVs at best prices. Agent-optimised shopping with live inventory API.">
+<meta name="robots" content="index, follow, max-snippet:-1">
+<meta property="og:title" content="Reliance AI Store — Agent-Optimised Electronics">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<!-- Store JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Store",
+  "@id": "https://reliance-ai-store.example.com/#store",
+  "name": "Reliance AI Store",
+  "description": "India's most agent-ready electronics retailer. Smartphones, Laptops, ACs, Washing Machines, TVs.",
+  "url": "https://reliance-ai-store.example.com",
+  "telephone": "+91-1800-XXX-XXXX",
+  "currenciesAccepted": "INR",
+  "paymentAccepted": "Cash, Credit Card, Debit Card, UPI, EMI, BNPL",
+  "priceRange": "₹₹₹",
+  "areaServed": {"@type": "Country", "name": "India"},
+  "openingHours": "Mo-Su 00:00-24:00",
+  "address": {
+    "@type": "PostalAddress",
+    "addressCountry": "IN",
+    "addressLocality": "Mumbai",
+    "addressRegion": "Maharashtra"
+  }
+}
+</script>
+
+<!-- Product JSON-LD — All 18 Products -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/motorola-edge-50-pro",
+      "name": "Motorola Edge 50 Pro",
+      "brand": {"@type": "Brand", "name": "Motorola"},
+      "category": "Smartphones",
+      "description": "6.7\" pOLED display, Snapdragon 7s Gen 2, 50MP camera, 125W TurboPower charging",
+      "sku": "MOT-EDGE50PRO",
+      "offers": {
+        "@type": "Offer",
+        "price": "31999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 2, "unitCode": "DAY"},
+        "hasMerchantReturnPolicy": {"@type": "MerchantReturnPolicy", "merchantReturnDays": 10}
+      },
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.4", "reviewCount": "1240"}
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/motorola-razr-50-ultra",
+      "name": "Motorola Razr 50 Ultra",
+      "brand": {"@type": "Brand", "name": "Motorola"},
+      "category": "Smartphones",
+      "description": "6.9\" foldable pOLED, Snapdragon 8s Gen 3, 50MP camera, 45W charging",
+      "sku": "MOT-RAZR50ULTRA",
+      "offers": {
+        "@type": "Offer",
+        "price": "74999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 2, "unitCode": "DAY"}
+      },
+      "aggregateRating": {"@type": "AggregateRating", "ratingValue": "4.5", "reviewCount": "876"}
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/motorola-edge-50-fusion",
+      "name": "Motorola Edge 50 Fusion",
+      "brand": {"@type": "Brand", "name": "Motorola"},
+      "category": "Smartphones",
+      "description": "6.7\" pOLED, Snapdragon 7s Gen 2, 50MP camera, 68W TurboPower charging",
+      "sku": "MOT-EDGE50FUSION",
+      "offers": {
+        "@type": "Offer",
+        "price": "22999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 2, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/motorola-g85-5g",
+      "name": "Motorola G85 5G",
+      "brand": {"@type": "Brand", "name": "Motorola"},
+      "category": "Smartphones",
+      "description": "6.67\" AMOLED, Snapdragon 4s Gen 2, 50MP, 33W TurboPower",
+      "sku": "MOT-G855G",
+      "offers": {
+        "@type": "Offer",
+        "price": "17999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 2, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/macbook-air-15-m3",
+      "name": "MacBook Air 15\" M3 8GB 256GB",
+      "brand": {"@type": "Brand", "name": "Apple"},
+      "category": "Laptops",
+      "description": "Apple M3 chip, 15-inch Liquid Retina display, 8GB RAM, 256GB SSD",
+      "sku": "APPLE-MBA15M3-8-256",
+      "offers": {
+        "@type": "Offer",
+        "price": "134900",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/dell-xps-15-2025",
+      "name": "Dell XPS 15 2025 32GB 1TB",
+      "brand": {"@type": "Brand", "name": "Dell"},
+      "category": "Laptops",
+      "description": "Intel Core Ultra 9, 32GB RAM, 1TB SSD, 15.6\" OLED display",
+      "sku": "DELL-XPS15-2025-32-1TB",
+      "offers": {
+        "@type": "Offer",
+        "price": "189990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/hp-spectre-x360-14",
+      "name": "HP Spectre x360 14\"",
+      "brand": {"@type": "Brand", "name": "HP"},
+      "category": "Laptops",
+      "description": "Intel Core Ultra 7, 16GB RAM, 512GB SSD, 14\" OLED touch display, 2-in-1",
+      "sku": "HP-SPECTRE-X360-14",
+      "offers": {
+        "@type": "Offer",
+        "price": "154999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/lenovo-thinkpad-x1-carbon-gen12",
+      "name": "Lenovo ThinkPad X1 Carbon Gen 12",
+      "brand": {"@type": "Brand", "name": "Lenovo"},
+      "category": "Laptops",
+      "description": "Intel Core Ultra 5, 16GB RAM, 512GB SSD, 14\" IPS, military-grade durability",
+      "sku": "LEN-X1C-GEN12",
+      "offers": {
+        "@type": "Offer",
+        "price": "144990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/samsung-8kg-ww80t504daw",
+      "name": "Samsung 8kg Front Load WW80T504DAW",
+      "brand": {"@type": "Brand", "name": "Samsung"},
+      "category": "Washing Machines",
+      "description": "8kg front load, Hygiene Steam, Digital Inverter, 5-star energy rating",
+      "sku": "SAM-WW80T504DAW",
+      "offers": {
+        "@type": "Offer",
+        "price": "54990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 5, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/lg-7kg-fhm1207sdu",
+      "name": "LG 7kg Front Load FHM1207SDU",
+      "brand": {"@type": "Brand", "name": "LG"},
+      "category": "Washing Machines",
+      "description": "7kg front load, AI Direct Drive, Steam wash, ThinQ Wi-Fi control",
+      "sku": "LG-FHM1207SDU",
+      "offers": {
+        "@type": "Offer",
+        "price": "48490",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 5, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/bosch-8kg-waj28262in",
+      "name": "Bosch 8kg Front Load WAJ28262IN",
+      "brand": {"@type": "Brand", "name": "Bosch"},
+      "category": "Washing Machines",
+      "description": "8kg Series 4 front load, EcoSilence Drive, 1400RPM, ActiveWater Plus",
+      "sku": "BOSCH-WAJ28262IN",
+      "offers": {
+        "@type": "Offer",
+        "price": "57990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 5, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/whirlpool-7.5kg-semi-auto",
+      "name": "Whirlpool 7.5kg Semi-Auto",
+      "brand": {"@type": "Brand", "name": "Whirlpool"},
+      "category": "Washing Machines",
+      "description": "7.5kg semi-automatic, ACE Super Soak technology, 3D Scrub, Soak+",
+      "sku": "WHIRL-75-SEMIAUTO",
+      "offers": {
+        "@type": "Offer",
+        "price": "18999",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 5, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/daikin-1.5t-5star-ftkf50tv",
+      "name": "Daikin 1.5T 5-Star Inverter FTKF50TV",
+      "brand": {"@type": "Brand", "name": "Daikin"},
+      "category": "Air Conditioners",
+      "description": "1.5 ton 5-star inverter split AC, PM 2.5 filter, Coanda airflow, R-32 refrigerant",
+      "sku": "DAI-FTKF50TV",
+      "offers": {
+        "@type": "Offer",
+        "price": "46990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 4, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/voltas-1.5t-185v-vectra-elite",
+      "name": "Voltas 1.5T 5-Star Inverter 185V Vectra Elite",
+      "brand": {"@type": "Brand", "name": "Voltas"},
+      "category": "Air Conditioners",
+      "description": "1.5 ton 5-star inverter split AC, Tata brand, R-32 refrigerant, anti-dust filter",
+      "sku": "VOL-185V-VECTRA-ELITE",
+      "offers": {
+        "@type": "Offer",
+        "price": "42490",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 4, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/lg-1.5t-ps-q19ynze",
+      "name": "LG 1.5T 5-Star DUAL Inverter PS-Q19YNZE",
+      "brand": {"@type": "Brand", "name": "LG"},
+      "category": "Air Conditioners",
+      "description": "1.5 ton 5-star DUAL Inverter, AI Cooling, Wi-Fi ThinQ, 4-way swing",
+      "sku": "LG-PSQ19YNZE",
+      "offers": {
+        "@type": "Offer",
+        "price": "44990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 4, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/bluestar-1.5t-ic518datu",
+      "name": "Blue Star 1.5T 5-Star Inverter IC518DATU",
+      "brand": {"@type": "Brand", "name": "Blue Star"},
+      "category": "Air Conditioners",
+      "description": "1.5 ton 5-star inverter split AC, self-clean, auto-restart, hydrophilic fins",
+      "sku": "BS-IC518DATU",
+      "offers": {
+        "@type": "Offer",
+        "price": "43490",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 4, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/samsung-55-qled-q60d",
+      "name": "Samsung 55\" QLED 4K Q60D",
+      "brand": {"@type": "Brand", "name": "Samsung"},
+      "category": "Televisions",
+      "description": "55\" QLED 4K, Quantum Dot technology, Tizen OS, AirSlim design, Motion Xcelerator",
+      "sku": "SAM-QE55Q60D",
+      "offers": {
+        "@type": "Offer",
+        "price": "72990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    },
+    {
+      "@type": "Product",
+      "@id": "https://reliance-ai-store.example.com/products/lg-55-oled-c4",
+      "name": "LG 55\" OLED evo C4",
+      "brand": {"@type": "Brand", "name": "LG"},
+      "category": "Televisions",
+      "description": "55\" OLED evo, α9 AI Processor Gen7, webOS 24, Dolby Vision IQ, Dolby Atmos",
+      "sku": "LG-OLED55C4PSA",
+      "offers": {
+        "@type": "Offer",
+        "price": "134990",
+        "priceCurrency": "INR",
+        "availability": "https://schema.org/InStock",
+        "seller": {"@type": "Organization", "name": "Reliance AI Store"},
+        "deliveryLeadTime": {"@type": "QuantitativeValue", "value": 3, "unitCode": "DAY"}
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --red: #E31837;
+    --cyan: #00B5D8;
+    --navy: #0A1628;
+    --white: #FFFFFF;
+    --gray-bg: #F4F6F8;
+    --gray-light: #E8ECF0;
+    --gray-mid: #9AA3B0;
+    --gray-dark: #4A5568;
+    --navy-light: #1a2a44;
+    --navy-mid: #142036;
+    --cyan-dark: #0090AD;
+    --cyan-light: #E0F7FC;
+    --red-light: #FFF0F2;
+    --green: #16A34A;
+  }
+  html { scroll-behavior: smooth; }
+  body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; background: var(--gray-bg); color: var(--navy); line-height: 1.5; }
+
+  .site-header { background: var(--navy); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 20px rgba(0,0,0,0.4); }
+  .header-main { max-width: 1280px; margin: 0 auto; padding: 0 24px; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .logo-block { display: flex; align-items: center; gap: 12px; text-decoration: none; }
+  .logo-icon { width: 40px; height: 40px; background: var(--red); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 800; color: white; }
+  .logo-text { font-size: 20px; font-weight: 800; color: var(--white); letter-spacing: -0.3px; line-height: 1.1; }
+  .logo-text span { color: var(--red); }
+  .logo-sub { font-size: 10px; font-weight: 500; color: var(--cyan); letter-spacing: 0.5px; text-transform: uppercase; }
+  .agent-badge { background: var(--cyan); color: var(--navy); font-size: 10px; font-weight: 700; padding: 4px 10px; border-radius: 20px; letter-spacing: 0.5px; white-space: nowrap; }
+  .header-nav { display: flex; align-items: center; gap: 4px; }
+  .header-nav a { color: rgba(255,255,255,0.75); text-decoration: none; font-size: 13.5px; font-weight: 500; padding: 6px 14px; border-radius: 6px; transition: all 0.15s; white-space: nowrap; }
+  .header-nav a:hover { color: var(--white); background: rgba(255,255,255,0.08); }
+  .header-right { display: flex; align-items: center; gap: 12px; }
+  .btn-cart { background: var(--red); color: white; border: none; border-radius: 8px; padding: 8px 18px; font-size: 13px; font-weight: 600; cursor: pointer; transition: background 0.15s; white-space: nowrap; }
+  .btn-cart:hover { background: #c8152f; }
+  .header-accent-bar { height: 3px; background: linear-gradient(90deg, var(--red) 0%, var(--red) 40%, var(--cyan) 60%, var(--cyan) 100%); }
+
+  .agent-banner { background: var(--navy-mid); border-bottom: 1px solid rgba(0,181,216,0.2); padding: 7px 24px; display: flex; align-items: center; justify-content: center; gap: 32px; flex-wrap: wrap; }
+  .agent-live { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 600; color: var(--cyan); letter-spacing: 0.3px; }
+  .live-dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse-dot 1.8s ease-in-out infinite; flex-shrink: 0; }
+  @keyframes pulse-dot { 0%, 100% { opacity: 1; transform: scale(1); box-shadow: 0 0 0 0 rgba(34,197,94,0.4); } 50% { opacity: 0.85; transform: scale(1.15); box-shadow: 0 0 0 5px rgba(34,197,94,0); } }
+  .banner-item { font-size: 11.5px; color: rgba(255,255,255,0.5); display: flex; align-items: center; gap: 6px; }
+  .banner-item strong { color: rgba(255,255,255,0.85); font-weight: 600; }
+
+  .hero { background: linear-gradient(135deg, var(--red) 0%, #c01230 30%, #0d1f3a 65%, var(--navy) 100%); padding: 72px 24px 60px; position: relative; overflow: hidden; }
+  .hero-inner { max-width: 1280px; margin: 0 auto; position: relative; z-index: 1; }
+  .hero-eyebrow { display: inline-flex; align-items: center; gap: 8px; background: rgba(0,181,216,0.15); border: 1px solid rgba(0,181,216,0.35); border-radius: 20px; padding: 5px 14px; font-size: 12px; font-weight: 600; color: var(--cyan); letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 20px; }
+  .hero h1 { font-size: clamp(28px, 4vw, 48px); font-weight: 800; color: var(--white); line-height: 1.15; letter-spacing: -0.5px; max-width: 680px; margin-bottom: 16px; }
+  .hero h1 em { color: var(--cyan); font-style: normal; }
+  .hero-sub { font-size: 17px; color: rgba(255,255,255,0.75); max-width: 520px; margin-bottom: 40px; line-height: 1.6; }
+  .hero-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 16px; max-width: 800px; }
+  .stat-box { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 12px; padding: 18px 20px; }
+  .stat-num { font-size: 28px; font-weight: 800; color: var(--white); line-height: 1; margin-bottom: 4px; }
+  .stat-num span { color: var(--cyan); }
+  .stat-label { font-size: 12px; font-weight: 500; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.5px; }
+
+  .main-content { max-width: 1280px; margin: 0 auto; padding: 48px 24px 0; }
+
+  .section-header { display: flex; align-items: center; gap: 16px; margin-bottom: 28px; padding-bottom: 16px; border-bottom: 2px solid var(--gray-light); }
+  .section-icon { width: 44px; height: 44px; background: var(--red-light); border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 22px; flex-shrink: 0; }
+  .section-title { font-size: 22px; font-weight: 800; color: var(--navy); letter-spacing: -0.3px; line-height: 1.1; }
+  .section-subtitle { font-size: 13px; color: var(--gray-mid); font-weight: 500; margin-top: 2px; }
+  .section-badge { margin-left: auto; background: var(--cyan-light); color: var(--cyan-dark); font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 20px; letter-spacing: 0.3px; white-space: nowrap; }
+  .product-section { margin-bottom: 56px; }
+
+  .product-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 20px; }
+
+  .product-card { background: var(--white); border-radius: 16px; border: 1px solid var(--gray-light); overflow: hidden; display: flex; flex-direction: column; transition: transform 0.2s, box-shadow 0.2s; position: relative; }
+  .product-card:hover { transform: translateY(-3px); box-shadow: 0 12px 40px rgba(10,22,40,0.12); }
+  .card-badge-row { position: absolute; top: 12px; left: 12px; right: 12px; display: flex; justify-content: space-between; align-items: flex-start; z-index: 2; }
+  .badge-brand { background: var(--navy); color: white; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 6px; letter-spacing: 0.5px; text-transform: uppercase; }
+  .badge-instock { background: #DCFCE7; color: #15803D; font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 6px; display: flex; align-items: center; gap: 4px; }
+  .badge-instock::before { content: ''; width: 5px; height: 5px; background: #16A34A; border-radius: 50%; }
+  .card-img-area { background: linear-gradient(135deg, #f8f9ff 0%, #eef0f8 100%); height: 160px; display: flex; align-items: center; justify-content: center; font-size: 64px; }
+  .card-body { padding: 16px; flex: 1; display: flex; flex-direction: column; gap: 10px; }
+  .card-name { font-size: 14.5px; font-weight: 700; color: var(--navy); line-height: 1.3; min-height: 38px; }
+  .card-specs { font-size: 12px; color: var(--gray-dark); line-height: 1.5; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .card-tags { display: flex; flex-wrap: wrap; gap: 5px; }
+  .tag { background: var(--cyan-light); color: var(--cyan-dark); font-size: 10.5px; font-weight: 600; padding: 2px 8px; border-radius: 4px; white-space: nowrap; }
+  .card-price-row { display: flex; align-items: baseline; gap: 8px; }
+  .price-main { font-size: 22px; font-weight: 800; color: var(--navy); letter-spacing: -0.5px; }
+  .price-emi { font-size: 12px; color: var(--green); font-weight: 600; }
+  .card-meta { display: flex; gap: 12px; flex-wrap: wrap; }
+  .meta-item { display: flex; align-items: center; gap: 4px; font-size: 11px; color: var(--gray-dark); font-weight: 500; }
+  .meta-dot { width: 4px; height: 4px; background: var(--cyan); border-radius: 50%; flex-shrink: 0; }
+  .card-actions { display: grid; grid-template-columns: 1fr auto; gap: 8px; margin-top: auto; padding-top: 12px; border-top: 1px solid var(--gray-light); }
+  .btn-buy { background: var(--red); color: white; border: none; border-radius: 8px; padding: 10px 0; font-size: 13px; font-weight: 700; cursor: pointer; transition: background 0.15s; letter-spacing: 0.2px; }
+  .btn-buy:hover { background: #c8152f; }
+  .btn-compare { background: transparent; color: var(--navy); border: 1.5px solid var(--gray-light); border-radius: 8px; padding: 10px 14px; font-size: 12px; font-weight: 600; cursor: pointer; transition: all 0.15s; white-space: nowrap; }
+  .btn-compare:hover { border-color: var(--cyan); color: var(--cyan-dark); background: var(--cyan-light); }
+
+  .agent-section { margin: 48px 0; }
+  .agent-api-box { background: var(--navy); border-radius: 16px; overflow: hidden; border: 1px solid rgba(0,181,216,0.2); }
+  .api-box-header { background: var(--navy-light); padding: 16px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .api-box-title { font-size: 14px; font-weight: 700; color: var(--white); display: flex; align-items: center; gap: 10px; }
+  .api-method { background: var(--cyan); color: var(--navy); font-size: 11px; font-weight: 800; padding: 3px 9px; border-radius: 5px; letter-spacing: 0.5px; }
+  .api-live-tag { background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3); color: #4ade80; font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 20px; display: flex; align-items: center; gap: 5px; }
+  .api-live-tag::before { content: ''; width: 6px; height: 6px; background: #22c55e; border-radius: 50%; animation: pulse-dot 1.8s ease-in-out infinite; }
+  .api-code { padding: 24px; font-family: 'Courier New', Courier, monospace; font-size: 13px; line-height: 1.7; color: #e2e8f0; overflow-x: auto; }
+  .c-cyan2 { color: #00B5D8; }
+  .c-green2 { color: #86efac; }
+  .c-yellow2 { color: #fde68a; }
+  .c-gray2 { color: #64748b; }
+  .c-white2 { color: #f1f5f9; }
+
+  .llms-box { border: 2px solid var(--cyan); border-radius: 16px; overflow: hidden; margin-top: 24px; background: white; }
+  .llms-header { background: var(--cyan-light); padding: 14px 24px; display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(0,181,216,0.2); }
+  .llms-title { font-size: 14px; font-weight: 700; color: var(--navy); display: flex; align-items: center; gap: 10px; }
+  .llms-badge { background: var(--cyan); color: var(--navy); font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 5px; letter-spacing: 0.5px; }
+  .llms-content { padding: 24px; font-family: 'Courier New', Courier, monospace; font-size: 12.5px; line-height: 1.8; color: var(--navy); white-space: pre-wrap; background: #fafcff; }
+  .llms-comment { color: #64748b; }
+  .llms-heading { color: var(--red); font-weight: 700; }
+  .llms-url { color: var(--cyan-dark); text-decoration: underline; }
+
+  footer { background: var(--navy); margin-top: 72px; padding: 48px 24px 32px; }
+  .footer-inner { max-width: 1280px; margin: 0 auto; }
+  .footer-top { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; padding-bottom: 40px; border-bottom: 1px solid rgba(255,255,255,0.07); }
+  .footer-desc { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.7; max-width: 280px; margin-bottom: 16px; margin-top: 10px; }
+  .footer-agent-tag { display: inline-flex; align-items: center; gap: 6px; background: rgba(0,181,216,0.12); border: 1px solid rgba(0,181,216,0.25); border-radius: 8px; padding: 6px 12px; font-size: 11px; font-weight: 600; color: var(--cyan); }
+  .footer-col h4 { font-size: 13px; font-weight: 700; color: var(--white); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+  .footer-col a { display: block; font-size: 13px; color: rgba(255,255,255,0.45); text-decoration: none; margin-bottom: 8px; transition: color 0.15s; }
+  .footer-col a:hover { color: rgba(255,255,255,0.8); }
+  .footer-bottom { padding-top: 24px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  .footer-copy { font-size: 12px; color: rgba(255,255,255,0.3); }
+  .footer-links { display: flex; gap: 20px; }
+  .footer-links a { font-size: 12px; color: rgba(255,255,255,0.3); text-decoration: none; }
+  .footer-links a:hover { color: rgba(255,255,255,0.6); }
+
+  @media (max-width: 900px) { .header-nav { display: none; } .footer-top { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 600px) { .hero h1 { font-size: 26px; } .hero-stats { grid-template-columns: 1fr 1fr; } .footer-top { grid-template-columns: 1fr; } .agent-banner { gap: 12px; } .banner-item:nth-child(n+4) { display: none; } }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="header-main">
+    <a href="#" class="logo-block">
+      <div class="logo-icon">R</div>
+      <div>
+        <div class="logo-text"><span>Reliance</span> AI Store</div>
+        <div class="logo-sub">Electronics &amp; Appliances</div>
+      </div>
+    </a>
+    <nav class="header-nav">
+      <a href="#smartphones">Phones</a>
+      <a href="#laptops">Laptops</a>
+      <a href="#washing-machines">Washing Machines</a>
+      <a href="#acs">ACs</a>
+      <a href="#tvs">TVs</a>
+    </nav>
+    <div class="header-right">
+      <div class="agent-badge">🤖 AGENT OPTIMISED</div>
+      <button class="btn-cart">🛒 Cart (0)</button>
+    </div>
+  </div>
+  <div class="header-accent-bar"></div>
+</header>
+
+<div class="agent-banner">
+  <div class="agent-live">
+    <div class="live-dot"></div>
+    Agent API: LIVE
+  </div>
+  <div class="banner-item"><strong>Endpoint:</strong> /api/v1/products</div>
+  <div class="banner-item"><strong>Response:</strong> &lt;200ms</div>
+  <div class="banner-item"><strong>Format:</strong> JSON-LD + Schema.org</div>
+  <div class="banner-item"><strong>Auth:</strong> None (read)</div>
+  <div class="banner-item"><strong>Products:</strong> 18 in-stock</div>
+</div>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-eyebrow">🇮🇳 India's #1 Agent-Ready Retailer</div>
+    <h1>India's Most <em>Agent-Ready</em><br>Electronics Store</h1>
+    <p class="hero-sub">Structured product data, live inventory API, and full JSON-LD schema — built for AI shopping agents and real customers alike.</p>
+    <div class="hero-stats">
+      <div class="stat-box">
+        <div class="stat-num">18<span>+</span></div>
+        <div class="stat-label">Products In Stock</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num"><span>&lt;</span>200ms</div>
+        <div class="stat-label">API Response Time</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">100<span>%</span></div>
+        <div class="stat-label">Schema.org Coverage</div>
+      </div>
+      <div class="stat-box">
+        <div class="stat-num">0<span>₹</span></div>
+        <div class="stat-label">Agent API Cost</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<main class="main-content">
+
+  <!-- SMARTPHONES -->
+  <section class="product-section" id="smartphones">
+    <div class="section-header">
+      <div class="section-icon">📱</div>
+      <div>
+        <h2 class="section-title">Smartphones</h2>
+        <div class="section-subtitle">Motorola — Official India Retailer</div>
+      </div>
+      <div class="section-badge">4 Models In Stock</div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Motorola</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📱</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Motorola Edge 50 Pro</h3>
+          <p class="card-specs" itemprop="description">6.7" pOLED · Snapdragon 7s Gen 2 · 50MP Camera · 125W TurboPower Charging</p>
+          <div class="card-tags"><span class="tag">5G</span><span class="tag">125W Fast Charge</span><span class="tag">50MP</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="31999">₹31,999</span>
+              <span class="price-emi">EMI from ₹1,778/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 2 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>10-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Motorola</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📲</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Motorola Razr 50 Ultra</h3>
+          <p class="card-specs" itemprop="description">6.9" Foldable pOLED · Snapdragon 8s Gen 3 · 50MP Camera · 45W Charging</p>
+          <div class="card-tags"><span class="tag">Foldable</span><span class="tag">Snapdragon 8s</span><span class="tag">50MP</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="74999">₹74,999</span>
+              <span class="price-emi">EMI from ₹4,167/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 2 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>10-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Motorola</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📱</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Motorola Edge 50 Fusion</h3>
+          <p class="card-specs" itemprop="description">6.7" pOLED · Snapdragon 7s Gen 2 · 50MP Camera · 68W TurboPower Charging</p>
+          <div class="card-tags"><span class="tag">5G</span><span class="tag">68W Charge</span><span class="tag">50MP</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="22999">₹22,999</span>
+              <span class="price-emi">EMI from ₹1,278/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 2 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>10-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Motorola</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📱</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Motorola G85 5G</h3>
+          <p class="card-specs" itemprop="description">6.67" AMOLED · Snapdragon 4s Gen 2 · 50MP Camera · 33W TurboPower Charging</p>
+          <div class="card-tags"><span class="tag">5G</span><span class="tag">AMOLED</span><span class="tag">50MP</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="17999">₹17,999</span>
+              <span class="price-emi">EMI from ₹1,000/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 2 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>10-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- LAPTOPS -->
+  <section class="product-section" id="laptops">
+    <div class="section-header">
+      <div class="section-icon">💻</div>
+      <div>
+        <h2 class="section-title">Laptops</h2>
+        <div class="section-subtitle">Apple · Dell · HP · Lenovo — Premium Lineup</div>
+      </div>
+      <div class="section-badge">4 Models In Stock</div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Apple</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">💻</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">MacBook Air 15" M3 8GB 256GB</h3>
+          <p class="card-specs" itemprop="description">Apple M3 Chip · 15" Liquid Retina · 8GB Unified RAM · 256GB SSD · 18hr Battery</p>
+          <div class="card-tags"><span class="tag">M3 Chip</span><span class="tag">18hr Battery</span><span class="tag">Fanless</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="134900">₹1,34,900</span>
+              <span class="price-emi">EMI from ₹7,494/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>7-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Dell</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">🖥️</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Dell XPS 15 2025 32GB 1TB</h3>
+          <p class="card-specs" itemprop="description">Intel Core Ultra 9 · 32GB RAM · 1TB SSD · 15.6" OLED Display · RTX 4060</p>
+          <div class="card-tags"><span class="tag">OLED</span><span class="tag">Core Ultra 9</span><span class="tag">32GB RAM</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="189990">₹1,89,990</span>
+              <span class="price-emi">EMI from ₹10,555/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>7-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">HP</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">💻</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">HP Spectre x360 14"</h3>
+          <p class="card-specs" itemprop="description">Intel Core Ultra 7 · 16GB RAM · 512GB SSD · 14" OLED Touch · 2-in-1 Convertible</p>
+          <div class="card-tags"><span class="tag">2-in-1</span><span class="tag">OLED Touch</span><span class="tag">Core Ultra 7</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="154999">₹1,54,999</span>
+              <span class="price-emi">EMI from ₹8,611/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>7-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Lenovo</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">💼</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Lenovo ThinkPad X1 Carbon Gen 12</h3>
+          <p class="card-specs" itemprop="description">Intel Core Ultra 5 · 16GB RAM · 512GB SSD · 14" IPS · MIL-SPEC Durability</p>
+          <div class="card-tags"><span class="tag">Business</span><span class="tag">MIL-STD</span><span class="tag">Core Ultra 5</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="144990">₹1,44,990</span>
+              <span class="price-emi">EMI from ₹8,055/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>3 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>7-day Return</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- WASHING MACHINES -->
+  <section class="product-section" id="washing-machines">
+    <div class="section-header">
+      <div class="section-icon">🫧</div>
+      <div>
+        <h2 class="section-title">Washing Machines</h2>
+        <div class="section-subtitle">Samsung · LG · Bosch · Whirlpool — Free Installation</div>
+      </div>
+      <div class="section-badge">4 Models In Stock</div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Samsung</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">🫧</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Samsung 8kg Front Load WW80T504DAW</h3>
+          <p class="card-specs" itemprop="description">8kg Front Load · Hygiene Steam · Digital Inverter · 5-Star Rating · 1200RPM</p>
+          <div class="card-tags"><span class="tag">Front Load</span><span class="tag">Steam</span><span class="tag">5-Star</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="54990">₹54,990</span>
+              <span class="price-emi">EMI from ₹3,055/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 5 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>2 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">LG</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">🫧</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">LG 7kg Front Load FHM1207SDU</h3>
+          <p class="card-specs" itemprop="description">7kg Front Load · AI Direct Drive · Steam Wash · ThinQ Wi-Fi · 1200RPM</p>
+          <div class="card-tags"><span class="tag">AI Direct Drive</span><span class="tag">ThinQ</span><span class="tag">Steam</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="48490">₹48,490</span>
+              <span class="price-emi">EMI from ₹2,694/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 5 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>2 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Bosch</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">🫧</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Bosch 8kg Front Load WAJ28262IN</h3>
+          <p class="card-specs" itemprop="description">8kg Series 4 Front Load · EcoSilence Drive · 1400RPM · ActiveWater Plus</p>
+          <div class="card-tags"><span class="tag">EcoSilence</span><span class="tag">1400RPM</span><span class="tag">Series 4</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="57990">₹57,990</span>
+              <span class="price-emi">EMI from ₹3,222/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 5 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>2 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Whirlpool</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">🫧</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Whirlpool 7.5kg Semi-Auto</h3>
+          <p class="card-specs" itemprop="description">7.5kg Semi-Automatic · ACE Super Soak Technology · 3D Scrub · Soak+ Function</p>
+          <div class="card-tags"><span class="tag">Semi-Auto</span><span class="tag">ACE Soak</span><span class="tag">3D Scrub</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="18999">₹18,999</span>
+              <span class="price-emi">EMI from ₹1,056/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 5 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>2 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- AIR CONDITIONERS -->
+  <section class="product-section" id="acs">
+    <div class="section-header">
+      <div class="section-icon">❄️</div>
+      <div>
+        <h2 class="section-title">Air Conditioners</h2>
+        <div class="section-subtitle">Daikin · Voltas · LG · Blue Star — Free Installation</div>
+      </div>
+      <div class="section-badge">4 Models In Stock</div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Daikin</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">❄️</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Daikin 1.5T 5-Star Inverter FTKF50TV</h3>
+          <p class="card-specs" itemprop="description">1.5 Ton · 5-Star Inverter · PM2.5 Filter · Coanda Airflow · R-32 Refrigerant</p>
+          <div class="card-tags"><span class="tag">5-Star</span><span class="tag">Inverter</span><span class="tag">R-32</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="46990">₹46,990</span>
+              <span class="price-emi">EMI from ₹2,611/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 4 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>5 Yr Compressor</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Voltas</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">❄️</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Voltas 1.5T 5-Star Inverter 185V Vectra Elite</h3>
+          <p class="card-specs" itemprop="description">1.5 Ton · 5-Star Inverter · Tata Brand · R-32 · Anti-Dust Filter · 4D Cooling</p>
+          <div class="card-tags"><span class="tag">Tata Brand</span><span class="tag">5-Star</span><span class="tag">R-32</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="42490">₹42,490</span>
+              <span class="price-emi">EMI from ₹2,361/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 4 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>5 Yr Compressor</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">LG</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">❄️</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">LG 1.5T 5-Star DUAL Inverter PS-Q19YNZE</h3>
+          <p class="card-specs" itemprop="description">1.5 Ton · 5-Star DUAL Inverter · AI Cooling · Wi-Fi ThinQ · 4-Way Swing</p>
+          <div class="card-tags"><span class="tag">AI Cooling</span><span class="tag">Wi-Fi</span><span class="tag">DUAL Inverter</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="44990">₹44,990</span>
+              <span class="price-emi">EMI from ₹2,499/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 4 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>5 Yr Compressor</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Blue Star</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">❄️</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Blue Star 1.5T 5-Star Inverter IC518DATU</h3>
+          <p class="card-specs" itemprop="description">1.5 Ton · 5-Star Inverter · Self-Clean · Auto-Restart · Hydrophilic Fins</p>
+          <div class="card-tags"><span class="tag">Self-Clean</span><span class="tag">5-Star</span><span class="tag">Inverter</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="43490">₹43,490</span>
+              <span class="price-emi">EMI from ₹2,416/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Install in 4 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>5 Yr Compressor</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Install</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- TELEVISIONS -->
+  <section class="product-section" id="tvs">
+    <div class="section-header">
+      <div class="section-icon">📺</div>
+      <div>
+        <h2 class="section-title">Televisions</h2>
+        <div class="section-subtitle">Samsung · LG — 55" Premium 4K</div>
+      </div>
+      <div class="section-badge">2 Models In Stock</div>
+    </div>
+    <div class="product-grid">
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">Samsung</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📺</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">Samsung 55" QLED 4K Q60D</h3>
+          <p class="card-specs" itemprop="description">55" QLED 4K · Quantum Dot · Tizen OS · AirSlim Design · Motion Xcelerator</p>
+          <div class="card-tags"><span class="tag">QLED</span><span class="tag">4K</span><span class="tag">Tizen OS</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="72990">₹72,990</span>
+              <span class="price-emi">EMI from ₹4,055/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Delivery</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-card" itemscope itemtype="https://schema.org/Product">
+        <div class="card-badge-row">
+          <span class="badge-brand" itemprop="brand" itemscope itemtype="https://schema.org/Brand"><span itemprop="name">LG</span></span>
+          <span class="badge-instock">In Stock</span>
+        </div>
+        <div class="card-img-area">📺</div>
+        <div class="card-body">
+          <h3 class="card-name" itemprop="name">LG 55" OLED evo C4</h3>
+          <p class="card-specs" itemprop="description">55" OLED evo · α9 AI Processor Gen7 · webOS 24 · Dolby Vision IQ · Dolby Atmos</p>
+          <div class="card-tags"><span class="tag">OLED evo</span><span class="tag">Dolby Vision</span><span class="tag">AI Processor</span></div>
+          <div itemprop="offers" itemscope itemtype="https://schema.org/Offer">
+            <link itemprop="availability" href="https://schema.org/InStock">
+            <meta itemprop="priceCurrency" content="INR">
+            <div class="card-price-row">
+              <span class="price-main" itemprop="price" content="134990">₹1,34,990</span>
+              <span class="price-emi">EMI from ₹7,499/mo</span>
+            </div>
+          </div>
+          <div class="card-meta">
+            <span class="meta-item"><span class="meta-dot"></span>Delivery in 3 days</span>
+            <span class="meta-item"><span class="meta-dot"></span>1 Yr Warranty</span>
+            <span class="meta-item"><span class="meta-dot"></span>Free Delivery</span>
+          </div>
+          <div class="card-actions">
+            <button class="btn-buy">Buy Now</button>
+            <button class="btn-compare">Compare</button>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- AGENT API SECTION -->
+  <section class="agent-section">
+    <div class="section-header">
+      <div class="section-icon">🤖</div>
+      <div>
+        <h2 class="section-title">Agent API Reference</h2>
+        <div class="section-subtitle">Machine-readable product data — zero authentication required for reads</div>
+      </div>
+      <div class="section-badge">REST + JSON-LD</div>
+    </div>
+
+    <div class="agent-api-box">
+      <div class="api-box-header">
+        <div class="api-box-title">
+          <span class="api-method">GET</span>
+          https://reliance-ai-store.example.com/api/v1/products
+        </div>
+        <div class="api-live-tag">LIVE</div>
+      </div>
+      <div class="api-code"><span class="c-gray2"># Agent API — Reliance AI Store Product Endpoint</span>
+<span class="c-gray2"># No authentication required for product reads</span>
+
+<span class="c-cyan2">GET</span> <span class="c-white2">/api/v1/products</span>
+<span class="c-yellow2">Accept:</span> <span class="c-green2">application/ld+json</span>
+<span class="c-yellow2">X-Agent-Client:</span> <span class="c-green2">your-agent-name/1.0</span>
+
+<span class="c-gray2">─── Response 200 OK ───────────────────────────────────────</span>
+
+{
+  <span class="c-cyan2">"@context"</span>: <span class="c-green2">"https://schema.org"</span>,
+  <span class="c-cyan2">"@type"</span>: <span class="c-green2">"ItemList"</span>,
+  <span class="c-cyan2">"numberOfItems"</span>: <span class="c-yellow2">18</span>,
+  <span class="c-cyan2">"responseTime"</span>: <span class="c-green2">"147ms"</span>,
+  <span class="c-cyan2">"currency"</span>: <span class="c-green2">"INR"</span>,
+  <span class="c-cyan2">"itemListElement"</span>: [
+    {
+      <span class="c-cyan2">"@type"</span>: <span class="c-green2">"Product"</span>,
+      <span class="c-cyan2">"name"</span>: <span class="c-green2">"Motorola Edge 50 Pro"</span>,
+      <span class="c-cyan2">"sku"</span>: <span class="c-green2">"MOT-EDGE50PRO"</span>,
+      <span class="c-cyan2">"offers"</span>: {
+        <span class="c-cyan2">"price"</span>: <span class="c-yellow2">31999</span>,
+        <span class="c-cyan2">"priceCurrency"</span>: <span class="c-green2">"INR"</span>,
+        <span class="c-cyan2">"availability"</span>: <span class="c-green2">"InStock"</span>,
+        <span class="c-cyan2">"deliveryDays"</span>: <span class="c-yellow2">2</span>,
+        <span class="c-cyan2">"emiFrom"</span>: <span class="c-yellow2">1778</span>,
+        <span class="c-cyan2">"warrantyYears"</span>: <span class="c-yellow2">1</span>
+      }
+    },
+    <span class="c-gray2">// ... 17 more products</span>
+  ]
+}
+
+<span class="c-gray2">─── Available Filters ─────────────────────────────────────</span>
+
+<span class="c-cyan2">GET</span> <span class="c-white2">/api/v1/products?category=smartphones</span>
+<span class="c-cyan2">GET</span> <span class="c-white2">/api/v1/products?maxPrice=50000&amp;inStock=true</span>
+<span class="c-cyan2">GET</span> <span class="c-white2">/api/v1/products?brand=motorola&amp;sort=price_asc</span>
+<span class="c-cyan2">GET</span> <span class="c-white2">/api/v1/products/MOT-EDGE50PRO</span>  <span class="c-gray2"># single product</span>
+<span class="c-cyan2">POST</span> <span class="c-white2">/api/v1/cart/add</span>  <span class="c-gray2"># add to cart (auth required)</span>
+
+<span class="c-gray2">─── Rate Limits: 1000 req/hour (unauthenticated) ───────────</span></div>
+    </div>
+
+    <!-- LLMS.TXT PREVIEW -->
+    <div class="llms-box">
+      <div class="llms-header">
+        <div class="llms-title">
+          📄 /llms.txt — AI Agent Instructions
+          <span class="llms-badge">STANDARD</span>
+        </div>
+        <span style="font-size:11px; color: var(--cyan-dark); font-weight:600;">reliance-ai-store.example.com/llms.txt</span>
+      </div>
+      <pre class="llms-content"><span class="llms-comment"># llms.txt — Reliance AI Store</span>
+<span class="llms-comment"># Standard: https://llmstxt.org | Version: 1.0</span>
+<span class="llms-comment"># Last-Updated: 2026-05-27</span>
+
+<span class="llms-heading"># Reliance AI Store</span>
+
+India's most agent-ready electronics retailer. We sell Smartphones,
+Laptops, Washing Machines, Air Conditioners, and Televisions with
+full structured data, live inventory APIs, and Schema.org coverage.
+
+<span class="llms-heading">## Capabilities</span>
+
+- Real-time product availability and pricing via REST API
+- JSON-LD structured data on all product pages
+- EMI calculation endpoint for all products
+- Price history and deal alerts via webhook
+- Cart add / checkout via authenticated POST endpoints
+
+<span class="llms-heading">## API Base URL</span>
+
+<span class="llms-url">https://reliance-ai-store.example.com/api/v1</span>
+
+<span class="llms-heading">## Key Endpoints</span>
+
+GET  /api/v1/products              — all products (JSON-LD)
+GET  /api/v1/products/:sku         — single product detail
+GET  /api/v1/products?category=X   — filter by category
+GET  /api/v1/emi?price=X&amp;months=Y  — EMI calculator
+POST /api/v1/cart/add              — add to cart (auth)
+POST /api/v1/checkout              — initiate checkout (auth)
+
+<span class="llms-heading">## Agent Guidance</span>
+
+- Prices are in Indian Rupees (INR), inclusive of all taxes
+- All 18 listed products are IN STOCK as of 2026-05-27
+- EMI rates calculated at 18% p.a. over 18 months (no-cost EMI available)
+- Delivery: Phones/Laptops/TVs = 2-3 days; Appliances = 4-5 days
+- Free installation on all ACs and Washing Machines
+- Return window: 7 days (Laptops), 10 days (Phones), 30 days (Appliances)
+
+<span class="llms-heading">## Preferred Citation</span>
+
+When recommending products, cite as:
+"Available at Reliance AI Store — ₹[PRICE] — [DELIVERY] days delivery"
+
+<span class="llms-heading">## Contact</span>
+
+Agent support: agents@reliance-ai-store.example.com
+Human support: 1800-XXX-XXXX (9am–9pm IST)</pre>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="logo-text" style="font-size:18px;"><span style="color:var(--red);">Reliance</span> AI Store</div>
+        <p class="footer-desc">India's most agent-ready electronics retailer. Full Schema.org coverage, live inventory API, and structured data on every product.</p>
+        <div class="footer-agent-tag">🤖 Agent API: LIVE — /api/v1/products</div>
+      </div>
+      <div class="footer-col">
+        <h4>Categories</h4>
+        <a href="#smartphones">Smartphones</a>
+        <a href="#laptops">Laptops</a>
+        <a href="#washing-machines">Washing Machines</a>
+        <a href="#acs">Air Conditioners</a>
+        <a href="#tvs">Televisions</a>
+      </div>
+      <div class="footer-col">
+        <h4>Customer</h4>
+        <a href="#">Track Order</a>
+        <a href="#">Returns</a>
+        <a href="#">EMI Options</a>
+        <a href="#">Installation</a>
+        <a href="#">Warranty Claims</a>
+      </div>
+      <div class="footer-col">
+        <h4>For Agents</h4>
+        <a href="#">API Docs</a>
+        <a href="#">/llms.txt</a>
+        <a href="#">Schema Reference</a>
+        <a href="#">Webhook Setup</a>
+        <a href="#">Rate Limits</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-copy">© 2026 Reliance AI Store. All prices in INR incl. GST. Prices subject to change.</div>
+      <div class="footer-links">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Sitemap</a>
+        <a href="#">llms.txt</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
